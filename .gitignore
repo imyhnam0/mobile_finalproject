@@ -1,0 +1,95 @@
+#############################################
+# Project-wide .gitignore (edge + service + Client)
+#############################################
+
+#############################################
+# OS / Editor
+#############################################
+.DS_Store
+Thumbs.db
+
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.cursor/
+
+#############################################
+# Secrets / env
+#############################################
+.env
+.env.*
+*.env
+
+#############################################
+# Python (general)
+#############################################
+__pycache__/
+*.py[cod]
+*$py.class
+
+.Python
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments (repo-local)
+venv/
+.venv/
+**/venv/
+**/.venv/
+
+#############################################
+# Django / DRF (service/)
+#############################################
+service/db.sqlite3
+service/db.sqlite3-journal
+
+# Runtime uploads / generated files
+service/media/
+service/staticfiles/
+
+# Django logs
+service/*.log
+service/**/*.log
+
+#############################################
+# Edge (python inference) artifacts
+#############################################
+edge/captured/
+edge/runs/
+
+#############################################
+# Android / Gradle (Client/)
+#############################################
+**/.gradle/
+**/local.properties
+
+**/.externalNativeBuild/
+**/.cxx/
+
+**/build/
+**/out/
+
+*.apk
+*.ap_
+*.aab
+
+# Keystores (never commit)
+*.jks
+*.keystore
+
+#############################################
+# Misc
+#############################################
+*.log
+*.tmp
