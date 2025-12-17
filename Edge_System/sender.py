@@ -5,7 +5,7 @@ from datetime import datetime
 import requests
 import traceback
 
-SERVER_URL = "http://localhost:8000/api/fall-events/"
+SERVER_URL = "https://yunhyungnam.pythonanywhere.com/api/fall-events/"
 
 
 def send_fall_event(image_path, room="living_room"):

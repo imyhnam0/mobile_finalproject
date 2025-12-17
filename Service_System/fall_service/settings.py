@@ -1,15 +1,10 @@
-import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# PythonAnywhere/운영 환경에서는 환경변수로 관리하는 것을 권장합니다.
-# - DJANGO_SECRET_KEY: Django SECRET_KEY
-# - DJANGO_DEBUG: "1"(기본) 또는 "0"
-# - DJANGO_ALLOWED_HOSTS: 예) "username.pythonanywhere.com,localhost,127.0.0.1"
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "replace-this-with-a-secure-key")
-DEBUG = os.getenv("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS = [h.strip() for h in os.getenv("DJANGO_ALLOWED_HOSTS", "*").split(",") if h.strip()]
+SECRET_KEY = "replace-this-with-a-secure-key"
+DEBUG = True
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -71,8 +66,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = "static/"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
@@ -86,4 +80,4 @@ REST_FRAMEWORK = {
 }
 
 # Set your FCM server key in environment or override here
-FCM_SERVER_KEY = os.getenv("FCM_SERVER_KEY", "replace-with-fcm-server-key")
+FCM_SERVER_KEY = "replace-with-fcm-server-key"

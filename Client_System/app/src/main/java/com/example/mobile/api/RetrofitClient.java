@@ -8,8 +8,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitClient {
     // 서버 기본 URL - 실제 서버 주소로 변경하세요
-    private static final String BASE_URL = "http://10.0.2.2:8000/";  // Android 에뮬레이터용 localhost
-    // 실제 디바이스나 에뮬레이터가 아닌 경우: "http://YOUR_SERVER_IP:8000/"
+    // PythonAnywhere 서버 (배포 서버)
+    private static final String BASE_URL = "https://yunhyungnam.pythonanywhere.com/";
+    // 로컬 테스트(에뮬레이터): "http://10.0.2.2:8000/"
+    // 로컬 테스트(실제 디바이스): "http://YOUR_PC_IP:8000/"
 
     private static Retrofit retrofit;
     private static ApiService apiService;
